@@ -28,9 +28,12 @@ I analysed the data by doing calculations:
 -  5- I calculated productivity index  PI which is the efficiently of a crop. "how good is the production by used" formula is: prouction shared/area shared.
     In this section , since the percentage is .00, some area had 0.00% for some crop, it means it has an insignificant shared area. I used a formula to return 1 when ever the denominator (shared area ) is 0 to avoid #div/0 error. final formula= If(area<>0,production/area,1).
 *  6- I opened excel file with the pandas library and opened the sheet called final data.
--  7- with pandas python i found the list of my target districts (comments in python.ipynb) 
+-  7- with pandas python i found the list of my target districts (comments in python.ipynb).
+-  8- I filtered the data using basics functions.
 #### Data presentation:
-
+<img width="654" alt="Screenshot 2025-05-07 at 2 57 44 PM" src="https://github.com/user-attachments/assets/e93cd5dd-2ba4-403c-a991-72f50f1b3ecc" />
+This bar plot is a good example of data presentation as it shows the inequality of the productivity index of crops in a district.
+we can have a story around it and make suggestions to maximize the local production.
 
 
 ## Data type:
