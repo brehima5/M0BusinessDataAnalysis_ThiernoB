@@ -33,9 +33,7 @@ I analysed the data by doing calculations:
 
 
 
-## Methodology:
+## Data type:
 
-## Results & Business Recommendation:
+## Conclusion:
 asuifgs
-## Next:
-dsafgsa
