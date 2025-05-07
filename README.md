@@ -1,1 +1,39 @@
 # M0BusinessDataAnalysis_ThiernoB
+## Executive summary:
+Using Excel and Python, I found out that 3 crops (Corn, rice, wheat) cultivated in different districts in india don't have the same productivity.
+After identifing the Productivity index of each crop in its specific district, I made a list that display all the the districts that have at least one crop with a productivity index inferior to 0.5. This leads me to recommand a relocation of the areas cultivated to the best efficient crop in the district.
+## Business problem:
+Three(3) crops(corn, rice, wheat) are cultivated in the districts of different states in India. The production shows that certain crops are more efficient in terms of productivity than others within the same district . Those performing crops might benefit more area of production in their specific district at the expense of the less efficient ones. What are the target districts that could benefit from a relocation of cultivated areas to maximize local production ?
+## Data lifecycle and summarize tasks:
+<img width="570" alt="Screenshot 2025-05-07 at 10 52 17 AM" src="https://github.com/user-attachments/assets/e519b0a9-75cd-4f8e-8a11-5fef24ac0720" />
+
+### How does the data lifecycle apply to my business problem:
+#### Business problem:
+I defined a specific business problem that has a direct impact if solved
+#### Data collection:
+I Collected data that allign with my business problem. the source of my data: "https://www.kaggle.com/datasets/vineetkukreti/indian-agriculture-dataset"
+#### Data processing:
+I processed the data by cleaning it:
+-  1- I retrieved only the information i need : State,district,year,crop,production,area,yield.
+*  2- filtered the data by year to have the data from year 2000 to 2017
+-  3- displayed the data in a long selection format in a new sheet to unpivot the collunn for an efficient use of the pivot table.
+*  4- use a pivot table to have the data based on district(rows). 
+-  5- copy the pivot table and paste it as statique data in a new sheet for flexible changes and analysis.
+#### Data analysis:
+I analysed the data by doing calculations:
+-  1- I converted the yield form kg/ha to Tons/ha
+*  2- I calculated the total sum of production by district, the sum of area by district and the sum of average yield by district. formulas= sum(production corn,production rice, production wheat)...
+-  3- I then calculated the production shared for each crop in the district in percentage. Formula= production crop/production total (%); production rice/ production total (%); same for wheat
+*  4- I calculated the area shared for each crop by district. with the same methodoloy for the prooduction (in %)
+-  5- I calculated productivity index  PI which is the efficiently of a crop. "how good is the production by used" formula is: prouction shared/area shared.
+    In this section , since the percentage is .00, some area had 0.00% for some crop, it means it has an insignificant shared area. I used a formula to return 1 when ever the denominator (shared area ) is 0 to avoid #div/0 error. final formula= If(area<>0,production/area,1).
+*  6- I opened excel file with the pandas library and opened the sheet called final data.
+-  7- with pandas python i found the list of my target districts (comments in python.ipynb) 
+#### Data presentation:
+
+
+
+## Data type:
+
+## Conclusion:
+asuifgs
